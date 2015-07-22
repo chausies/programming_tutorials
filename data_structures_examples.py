@@ -1,6 +1,6 @@
-###################
-## List examples ##
-###################
+#-----------------#
+#  List examples  #
+#-----------------#
 
 # Lists hold a bunch of objects in them, whether they be ints, strs,
 # floats, or whatever. 
@@ -25,9 +25,9 @@ print "l is now " + str(l)
 l.reverse()
 print "l is now " + str(l)
 
-##################
-## List Problem ##
-##################
+#----------------#
+#  List Problem  #
+#----------------#
 
 # Given a list l, return a new list with just the first two and last two
 # elements in l. You may assume l has at least 4 elements in it.
@@ -41,15 +41,15 @@ ans = prob1(l)
 print "First 2 and last 2 elements of l are " + str(ans)
 
 
-#########################
-## Dictionary examples ##
-#########################
+#-----------------------#
+#  Dictionary examples  #
+#-----------------------#
 
 
 
-########################
-## Dictionary Problem ##
-########################
+#----------------------#
+#  Dictionary Problem  #
+#----------------------#
 
 # Given a string s, return a dictionary d where the keys are all the
 # letters occuring in s and the values are the number of times those

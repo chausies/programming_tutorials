@@ -1,6 +1,6 @@
-########################
-## While Loop Example ##
-########################
+#----------------------#
+#  While Loop Example  #
+#----------------------#
 
 # Find the largest integer k less than N such that k is divisible by both 
 # a and b
@@ -18,9 +18,9 @@ def ex1(N, a, b):
 ans = ex1(9876, 39, 51)
 print "The largest number less than 9876 that's divisible by both 39 and 51 is " + str(ans)
 
-#############
-# Problem 1 #
-#############
+#-------------#
+#  Problem 1  #
+#-------------#
 
 # Find the largest integer k less than N such that k is divisible by every
 # element in the list l
@@ -32,9 +32,9 @@ def prob1(N, l):
 ans = prob1(88888, [5, 7, 9, 10])
 print "The largest number less 88888 that's divisible by 5, 7, 9 and 10 is " + str(ans)
 
-######################
-## For Loop Example ##
-######################
+#--------------------#
+#  For Loop Example  #
+#--------------------#
 
 # Count the number of times the letter C appears in a string
 
@@ -51,9 +51,9 @@ tongue_twister = "Silly Sally sells seashells on the seashore."
 ans = ex2(tongue_twister, 's')
 print "The number of s's in the silly-sally tongue twister is " + str(ans)
 
-#############
-# Problem 2 #
-#############
+#-------------#
+#  Problem 2  #
+#-------------#
 
 # L is a list of lists. Find the longest list l in L, and then return the
 # largest element of l
