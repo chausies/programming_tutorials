@@ -41,6 +41,33 @@ ans = prob1(l)
 print "First 2 and last 2 elements of l are " + str(ans)
 
 
+# Given a list of numbers l, "smooth" it by replacing each element with the
+# average of itself and its 2 adjacent elements, and return this new
+# smoothed list s. You can assume that a 0 is adjacent to the first and
+# last elements of l.
+
+def smooth(l):
+  # YOUR CODE HERE
+  return "NOT YET IMPLEMENTED"
+
+l = [1, 3, 2, 4, 3, 5, 4, 6, 5, 7]
+s = smooth(l)
+print "smoothing " + str(l) + " yields " + str(s)
+
+
+# Next, using your smooth() function, write another function that, given a
+# list l, smoothes it k times
+
+def multi_smooth(l, k=1):
+  # YOUR CODE HERE
+  return "NOT YET IMPLEMENTED"
+
+l = [1, 3, 2, 4, 3, 5, 4, 6, 5, 7]
+s = multi_smooth(l, 5)
+print "smoothing " + str(l) + " 5 times over yields " + str(s)
+
+
+
 #-----------------------#
 #  Dictionary examples  #
 #-----------------------#
