@@ -19,6 +19,7 @@ print "3rd element of l is " + str(l[3])
 
 # append to a list
 l.append(1)
+
 print "l is now " + str(l)
 
 # reverse a list
@@ -34,7 +35,7 @@ print "l is now " + str(l)
 
 def prob1(l):
   # YOUR CODE HERE
-  return "NOT YET IMPLEMENTED"
+  return [l[0], l[1], l[len(l)-2], l[len(l)-1]]
 
 l = ["hey", "mickey", "you're", "so", "fine", "you're", "so", "fine", "you", "blow", "my", "mind"]
 ans = prob1(l)
@@ -47,8 +48,19 @@ print "First 2 and last 2 elements of l are " + str(ans)
 # last elements of l.
 
 def smooth(l):
-  # YOUR CODE HERE
-  return "NOT YET IMPLEMENTED"
+  s = []
+  i = 0
+  while i < len(l):
+    a = l[i-1]
+    b = l[i]
+    c = l[min(i+1, len(l)-1)]
+    if i == 0:
+      a = 0
+    elif i == len(l)-1:
+      c = 0
+    s.append((a + b + c)/3.0)
+    i += 1
+  return s
 
 l = [1, 3, 2, 4, 3, 5, 4, 6, 5, 7]
 s = smooth(l)
@@ -59,12 +71,17 @@ print "smoothing " + str(l) + " yields " + str(s)
 # list l, smoothes it k times
 
 def multi_smooth(l, k=1):
-  # YOUR CODE HERE
-  return "NOT YET IMPLEMENTED"
+  s = l
+  i = 0
+  while i < k:
+    s = smooth(s)
+    i = i + 1
+  return s
 
 l = [1, 3, 2, 4, 3, 5, 4, 6, 5, 7]
 s = multi_smooth(l, 5)
-print "smoothing " + str(l) + " 5 times over yields " + str(s)
+print "smoothing " + str(l) + " 5 times over yields " + str([ round(100*x)/100 for x in s])
+
 
 
 
