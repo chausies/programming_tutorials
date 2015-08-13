@@ -26,8 +26,17 @@ print "The largest number less than 9876 that's divisible by both 39 and 51 is "
 # element in the list l
 
 def prob1(N, l):
-  # YOUR CODE HERE
-  return "NOT YET IMPLEMENTED"
+  largest = 0
+  k = 1
+  while k < N:
+    valid = True
+    for a in l:
+      if (k % a != 0):
+        valid = False
+    if valid:
+      largest = k
+    k = k + 1 
+  return largest
 
 ans = prob1(88888, [5, 7, 9, 10])
 print "The largest number less 88888 that's divisible by 5, 7, 9 and 10 is " + str(ans)
@@ -59,8 +68,19 @@ print "The number of s's in the silly-sally tongue twister is " + str(ans)
 # largest element of l
 
 def prob2(L):
-  # YOUR CODE HERE
-  return "NOT YET IMPLEMENTED"
+  largest_len = 0
+  largest_list = None
+  for l in L:
+    if len(l) > largest_len:
+      largest_len = len(l) 
+      largest_list = l 
+  largest_k = 0
+  for k in l:
+    if k > largest_k:
+      largest_k = k
+  return largest_k
+
 
 L = [ [8, 9, 10], [5], [1, 5, 3, 6] ]
-print "The answer for Problem 2 is " + prob2(L) # should be 6
+print "The answer for Problem 2 is " + str(prob2(L)) # should be 6
+
