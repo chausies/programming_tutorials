@@ -89,7 +89,20 @@ print "smoothing " + str(l) + " 5 times over yields " + str([ round(100*x)/100 f
 #  Dictionary examples  #
 #-----------------------#
 
-
+def list2dic(l):
+  """
+  Given a list l, returns a dictionary d such that l[2*i]=>l[2*i+1] for all
+  i.
+  >>> l = ["a", 1, "b", 2, "c", 3]
+  >>> print list2dic(l) == {'a': 1, 'b': 2, 'c': 3}
+  True
+  """
+  d = {}
+  i = 0
+  while i < len(l):
+    d[l[i]] = l[i+1]
+    i = i + 2
+  return d
 
 #----------------------#
 #  Dictionary Problem  #
@@ -101,9 +114,42 @@ print "smoothing " + str(l) + " 5 times over yields " + str([ round(100*x)/100 f
 
 def prob2(s):
   s = s.lower() # make sure all the letters in s are lowercase
-  # YOUR CODE HERE
-  return "NOT YET IMPLEMENTED"
+  d = {}
+  for c in s:
+    if c in d:
+      d[c] = d[c] + 1
+    else:
+      d[c] = 1
+  for k in d.keys():
+    d[k] /= float(len(s))
+    d[k] = round(d[k]*100)
+  return d
 
 s = "Silly Sally sells seashells on the seashore"
 ans = prob2(s)
 print "Answer for problem 2: " + str(ans)
+print sum(ans.values())
+
+def reverse_dict(d):
+  """
+  Given a dictionary d, returns a new dictionary t so that entries (e.g. k:
+  v) in the original dictionary are flipped (e.g. v: k) in the new
+  dictionary. If multiple keys in d have the same value (e.g. k1: v, k2: v), 
+  then make the value point to a list of those keys (e.g. v: [k1, k2]) in t.
+  >>> d = {"a": 1, "b": 2, "c": 3, "d": 1}
+  >>> t = reverse_dict(d)
+  >>> expected_t = {1: ['a', 'd'], 2: 'b', 3: 'c'}
+  >>> print t == expected_t
+  True
+  """
+  t = {}
+  for k in d.keys():
+    v = d[k]
+    if not v in t:
+      t[v] = [k]
+    else:
+      t[v] = t[v] + [k]
+  for k in t.keys():
+    if len(t[k]) == 1:
+      t[k] = t[k][0]
+  return t
