@@ -18,4 +18,15 @@ def most_common(l):
       key = k
   return key
 
-
+def unique_items(l):
+  """
+  Given a list l, returns the number of unique elements in that list.
+  >>> l = [1, 2, "a", 2, "a", 1, 3]
+  >>> unique_items(l)
+  4
+  """
+  d = []
+  for x in l:
+    if not x in d:
+      d.append(x)
+  return len(d)
