@@ -30,3 +30,37 @@ def unique_items(l):
     if not x in d:
       d.append(x)
   return len(d)
+
+def max_f(l_f):
+  """Returns a function which is the max of provided functions.
+
+  Arguements
+  ----------
+  l_f : list of functions
+    A list of functions of one variable
+
+  Returns
+  ------
+  f : a function of one variable
+    f(x) returns the max value of all the funtions in l_f applied to x
+
+  Example
+  -------
+  >>> y_1 = lambda x : x
+  >>> y_2 = lambda x: -x
+  >>> l_f = [y_1, y_2]
+  >>> a = max_f(l_f)
+  >>> a(7)
+  7
+  >>> a(-7)
+  7
+  """
+  def fun(x):
+    largest = None
+    for f in l_f:
+      if largest == None:
+        largest = f(x) 
+      elif f(x) > largest:
+        largest = f(x)
+    return largest
+  return fun
