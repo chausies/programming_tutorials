@@ -154,7 +154,50 @@ def tennis_match(hist, sets=2):
   --------
   Plays a 2-set game of tennis 1 point at a time.
 
+  >>> whole_match = [
+  ...   0, 0, -1, -1, 1, -1, 1, -1, # p1 wins, 1 - 0
+  ...   0, -1, -1, 0, 1, -1, 1, 1, -1, 0, 1, 1, -1, 1, 1, # p2 wins, 1 - 1
+  ...   0, 0, -1, -1, 1, -1, 1, -1, # p1 wins, 2 - 1
+  ...   0, -1, -1, 0, 1, -1, 1, 1, -1, 0, 1, 1, -1, 1, 1, # p2 wins, 2 - 2
+  ...   0, 1, 1, 0, -1, 1, -1, -1, 1, 0, -1, -1, 1, -1, -1, # p1 wins, 3 - 2
+  ...   1, 1, 1, 1, # p2 wins, 3 - 3
+  ...   -1, -1, -1, -1, # p1 wins, 4 - 3
+  ...   -1, -1, -1, -1, # p1 wins, 5 - 3
+  ...   1, 1, 1, 1, # p2 wins, 5 - 4
+  ...   1, 1, 1, 1, # p2 wins, 5 - 5
+  ...   1, 1, 1, 1, # p2 wins, 5 - 6
+  ...   -1, -1, 1, -1, -1, # p1 wins, 6 - 6. Enter into tie-breaker
+  ...   1, 1, 1, 1, 1, 0, 0, 1, -1, -1, -1, -1, -1, -1, 1, -1, 1, -1, 1, -1, 1, -1, -1, 1, -1, 1, 1, # p2 wins the tie-break and the first set.
+  ...   -1, -1, -1, -1,
+  ...   -1, -1, -1, -1,
+  ...   -1, -1, -1, -1,
+  ...   -1, -1, -1, -1,
+  ...   -1, -1, -1, -1,
+  ...   -1, -1, -1, -1, # p1 wins second set
+  ...   0, 0, -1, -1, 1, -1, 1, -1, # p1 wins, 1 - 0
+  ...   0, -1, -1, 0, 1, -1, 1, 1, -1, 0, 1, 1, -1, 1, 1, # p2 wins, 1 - 1
+  ...   0, 0, -1, -1, 1, -1, 1, -1, # p1 wins, 2 - 1
+  ...   0, -1, -1, 0, 1, -1, 1, 1, -1, 0, 1, 1, -1, 1, 1, # p2 wins, 2 - 2
+  ...   0, 1, 1, 0, -1, 1, -1, -1, 1, 0, -1, -1, 1, -1, -1, # p1 wins, 3 - 2
+  ...   1, 1, 1, 1, # p2 wins, 3 - 3
+  ...   -1, -1, -1, -1, # p1 wins, 4 - 3
+  ...   -1, -1, -1, -1, # p1 wins, 5 - 3
+  ...   1, 1, 1, 1, # p2 wins, 5 - 4
+  ...   1, 1, 1, 1, # p2 wins, 5 - 5
+  ...   1, 1, 1, 1, # p2 wins, 5 - 6
+  ...   -1, -1, 1, -1, -1, # p1 wins, 6 - 6. Enter into tie-breaker
+  ...   1, 1, 1, 1, 1, 0, 0, 1, -1, -1, -1, -1, -1, -1, 1, -1, 1, -1, 1, -1, 1, -1, -1, 1, -1, 1, 1, # p2 wins the tie-break and the whole match
+  ...   ]
+  >>> match = []
+  >>> for i in range(len(whole_match)):
+  ...   match.append(whole_match[i])
+  ...   if i == len(whole_match) - 1: # If you're on the last point of the match
+  ...     print tennis_match(match)
+  ...   elif tennis_match(match) != 0: # The match should not be over until the last point
+  ...     print "Made an error on point #" + str(i + 1)
+  1
   """
+  return "NOT YET IMPLEMENTED"
 
 def play_rps(p1 = random_player, p2 = random_player, win_condition="standard", silent = False):
   """Plays a match of RPS with the given player strategies.
@@ -204,3 +247,7 @@ def play_rps(p1 = random_player, p2 = random_player, win_condition="standard", s
     win_condition = best_3_of_5
   return "NOT YET IMPLEMENTED"
  
+# The code inside this if-clause is run when `python rps.py` is called from
+# the command-line.k
+if __name__ == "__main__":
+  play_rps()
