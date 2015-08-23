@@ -27,7 +27,7 @@ def random_player():
   >>> for _ in range(1000):
   ...   x = player(ROCK)
   ...   X.append(x)
-  >>> round(X.count(ROCK)/1000, 1)
+  >>> round(X.count(ROCK)/1000.0, 1)
   0.3
   """
   def player(ignored):
