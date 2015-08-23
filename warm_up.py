@@ -64,3 +64,17 @@ def max_f(l_f):
         largest = f(x)
     return largest
   return fun
+
+def split_string(string):
+  """Splits a string into an array of words.
+
+  Walks through `string` and splits it into an array of words, where the
+  words were separated by a space (" ") in the original string.
+
+  Example
+  -------
+  >>> string = "Hello, how are you doing?"
+  >>> split_string(string) + 1
+  ['Hello,', 'how', 'are', 'you', 'doing?']
+  """
+  return "NOT YET IMPLEMENTED"
