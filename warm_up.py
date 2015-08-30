@@ -65,16 +65,16 @@ def max_f(l_f):
     return largest
   return fun
 
-def split_string(string):
-  """Splits a string into an array of words.
+def find_unique(items):
+  """Finds the unique item in a list
 
-  Walks through `string` and splits it into an array of words, where the
-  words were separated by a space (" ") in the original string.
+  Given a list of items where all elements have a brother except one,
+  returns the element that's unique.
 
   Example
   -------
-  >>> string = "Hello, how are you doing?"
-  >>> split_string(string) + 1
-  ['Hello,', 'how', 'are', 'you', 'doing?']
+  >>> items = [1, 2, 3, 2, 1, 6, 6]
+  >>> find_unique(items)
+  3
   """
   return "NOT YET IMPLEMENTED"
