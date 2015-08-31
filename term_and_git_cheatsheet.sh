@@ -40,9 +40,9 @@ git push origin master # pushes all committed changes on master
                        # WARNING: ALWAYS make sure to run "git pull"
                        # right BEFORE running git push.
           # already being tracked
-:q # quit vim
-:w # save vim
-ctrl+r # redo
-#if anything goes wrong, hit "escape" over and over again, and then "u" to undo as much as necessary
+# :q quit vim
+# :w save vim
+# ctrl+r redo
+# if anything goes wrong in vim, hit "escape" over and over again, and then "u" to undo as much as necessary
 
 
